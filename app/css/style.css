@@ -1,8 +1,8 @@
 body,
 html {
     background-color: #343A40;
-   
-    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+
 }
 
 hr {
@@ -36,3 +36,4 @@ hr {
     align-items: center;
     color: white;
 }
+
