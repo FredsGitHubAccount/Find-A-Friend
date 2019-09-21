@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
 
 </head>
 <body>
@@ -36,6 +38,86 @@
       </div>
 
 
+      <!-- Survey -->
+
+      <div class="survey-container bg-dark">
+        <div class="container">
+          <h1>Survey</h1>
+          <h2>Fill out the questions below to the best of your ability!</h2>
+          <p>The ratings are on a scale of 1-5 (Strongly Disagree - Strongly Agree)</p>
+          <form>
+            <div class="form-group">
+              <input id="name" type="text" class="form-control" placeholder="Name (Required)">
+            </div>
+            <div class="form-group">
+              <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+            </div>
+            <div class="form-group">
+              <label for="question1">How much do you enjoy whiskey?</label>
+              <select class="form-control" id="q1">
+                <option value="empty"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question2">Does science interest you?</label>
+              <select class="form-control" id="q2">
+                <option value="empty"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question3">Is eating at a buffet the highlight of your week?</label>
+              <select class="form-control" id="q3">
+                <option value="empty"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question4">I depend on my mom to bail me out of every situation.</label>
+              <select class="form-control" id="q4">
+                <option value="empty"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question5">Do you enjoy THE DANGER ZONE</label>
+              <select class="form-control" id="q5">
+                <option value="empty"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div>
+                <button id="submit-btn" type="submit" class="btn btn-light btn-lg">Submit</button>
+              </div>
+            </div>
+      </div>
+          </form>
+   
+
+
+
+
 
 
 
@@ -43,6 +125,35 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="../../matchlogic.js"></script>
+<script>
+  $("#submit-btn").on("click",function(){
+    event.preventDefault();
+
+    let valid = true;
+    
+    
+  
+    if($("#name".val() ==="" || $("#photo".val() ==="" ))){
+        valid = false;
+    }
+
+    else if($("#q1".val() ==="empty" || $("#q2".val() ==="empty" ) || $("#q3".val() ==="empty" ) || $("#q4".val() ==="empty" ) || $("#q5".val() ==="empty" ))){
+        valid = false
+    }
+
+    if (valid === true){
+        alert("GJ")
+
+    }
+
+    else {
+        alert("Fill out all fields");
+    }
+  
+
+  
+  })
+
+</script>
 </body>
 </html>
