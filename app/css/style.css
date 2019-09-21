@@ -37,3 +37,6 @@ hr {
     color: white;
 }
 
+.modal-body,.modal-title{
+    text-align: center;
+}

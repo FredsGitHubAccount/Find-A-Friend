@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(__dirname + "/app/css"));
-
+app.use(express.static(__dirname + "/app/javascript"));
 
 
 
