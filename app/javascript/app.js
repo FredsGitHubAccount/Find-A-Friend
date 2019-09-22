@@ -1,7 +1,5 @@
 $("#submit-btn").on("click", function (event) {
     event.preventDefault();
-    console.log("you hit the submit button!")
-
 
     let valid = true;
 
@@ -27,11 +25,32 @@ $("#submit-btn").on("click", function (event) {
             ]
         };
 
-        $.post("/api/friends", newUser, function (data) {
-            $("#friendName").html(data.name)
-            $("#friendImage").attr("src", data.photo)
-            $("#modal").modal("toggle")
-        });
+        // $.post("/api/friends", newUser, function (data) {
+        //     $("#friendName").html(data.name)
+        //     $("#friendImage").attr("src", data.photo)
+        //     $("#modal").modal("toggle")
+        // });
+
+        postRequest('/api/friends', newUser)
+            .then(function(data){
+                $("#friendName").html(data.name)
+                $("#friendImage").attr("src", data.photo)
+                $("#friendImage").addClass("animated fadeInUpBig")
+                 $("#modal").modal("toggle")
+            })
+            
+            function postRequest(url, data) {
+                return fetch(url, {
+                  credentials: 'same-origin', // 'include', default: 'omit'
+                  method: 'POST', // 'GET', 'PUT', 'DELETE', etc.
+                  body: JSON.stringify(data), // Coordinate the body type with 'Content-Type'
+                  headers: new Headers({
+                    'Content-Type': 'application/json'
+                  }),
+                })
+                .then(response => response.json())
+              }
+
 
         $("#name").val("");
         $("#photo").val("");

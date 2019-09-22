@@ -33,8 +33,6 @@ app.post("/api/friends",function(req,res){
     }
 
 
-
-    
     friends.push(newUser)
 
     res.json(friends[currentMatch])

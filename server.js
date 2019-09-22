@@ -1,4 +1,4 @@
-let port = 8080;
+let port = 8085;
 let express = require('express')
 let app = express();
 
@@ -7,8 +7,6 @@ app.use(express.json());
 
 app.use(express.static(__dirname + "/app/css"));
 app.use(express.static(__dirname + "/app/javascript"));
-
-
 
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
