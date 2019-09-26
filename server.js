@@ -1,4 +1,4 @@
-let port = 8087;
+let port = process.env.PORT || 8087;
 let express = require('express')
 let app = express();
 
