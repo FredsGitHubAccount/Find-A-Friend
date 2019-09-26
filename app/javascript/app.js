@@ -2,6 +2,7 @@ $("#submit-btn").on("click", function (event) {
     event.preventDefault();
 
     let valid = true;
+    
 
 
     if ($("#name").val() === "" || $("#photo").val() === "") {
@@ -35,8 +36,8 @@ $("#submit-btn").on("click", function (event) {
             .then(function(data){
                 $("#friendName").html(data.name)
                 $("#friendImage").attr("src", data.photo)
-                $("#friendImage").addClass("animated fadeInUpBig")
-                 $("#modal").modal("toggle")
+                $("#friendImage").addClass("animated fadeIn")
+                $("#modal").modal("toggle")
             })
             
             function postRequest(url, data) {
