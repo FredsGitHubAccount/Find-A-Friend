@@ -19,16 +19,10 @@ Front-End
 - [ ] Bootstrap
 - [ ] Animate.CSS
 
-
 Back-End
 - [ ] Express.js
 - [ ] Node.js
 - [ ] NPM Packages
-
-
-<!-- ### Video Demo
-[![Amazon-Store-Front Demo](https://img.youtube.com/vi/R5m683zdxiQ/0.jpg)](https://youtu.be/R5m683zdxiQ) -->
-
 
 ### Setup 
 ```
