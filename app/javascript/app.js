@@ -24,6 +24,7 @@ $("#submit-btn").on("click", function (event) {
                 $("#q4").val(),
                 $("#q5").val()
             ]
+            
         };
 
         // $.post("/api/friends", newUser, function (data) {

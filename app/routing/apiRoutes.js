@@ -9,7 +9,6 @@ app.get("/api/friends",function(req,res){
 app.post("/api/friends",function(req,res){
     let newUser = req.body
 
-
     for(let i = 0; i<newUser.scores.length; i++){
         newUser.scores[i] = parseInt(newUser.scores[i])
     };
@@ -28,7 +27,7 @@ app.post("/api/friends",function(req,res){
 
         if(totalDiff<minimumDiff){
             currentMatch = i
-            minimumDiff=totalDiff
+            minimumDiff = totalDiff
         }
     }
 
